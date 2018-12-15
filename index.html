@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,minimal-ui" name="viewport">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default.css">
+</head>
+<body>
+  <div id="app">
+    <div>
+      <md-button class="md-raised md-accent">VISA</md-button>
+      <md-button>PASSPORT</md-button>
+      <md-button class="md-raised md-primary">STUDENT PASS</md-button>
+      <md-button class="md-button md-theme-warning">WORKING PERMIT</md-button>
+    </div>
+
+    <md-app md-waterfall md-mode="fixed-last">
+      <md-app-toolbar class="md-small md-dense md-primary">
+        <div class="md-toolbar-row">
+          <md-tabs class="md-primary">
+            <md-tab md-label="UPLOAD DOCUMENT"></md-tab>
+            <md-tab md-label="DOCUMENT VERIFICATION"></md-tab>
+            <md-tab md-label="PRINT VISA"></md-tab>
+          </md-tabs>
+        </div>
+      </md-app-toolbar>
+
+        <md-app-content>
+          <div>
+            <form>
+              <md-field>
+                <label>Name:</label>
+                <md-input v-model="initial"></md-input>
+              </md-field>
+              <md-field>
+                <label>IC:</label>
+                <md-input v-model="initial"></md-input>
+              </md-field>
+              <md-field>
+                <label>PASSPORT PHOTOCOPIES</label>
+                <md-file v-model="placeholder" placeholder="PASSPORT PHOTOCOPIES" />
+              </md-field>
+              <md-field>
+                <label>VISA APPLICATION FORMS</label>
+                <md-file v-model="placeholder" placeholder="VIS APPLICATION FORMS" />
+              </md-field>
+              <md-field>
+                <label>APPLICANT'S PHOTO</label>
+                <md-file v-model="placeholder" placeholder="APPLICANT'S PHOTO" />
+              </md-field>
+              <md-field>
+                <label>FLIGHT TICKET PHOTOCOPY</label>
+                <md-file v-model="placeholder" placeholder="FLIGHT TICKET PHOTOCOPY" />
+              </md-field>
+              <md-field>
+                <label>APPLICANT'S CHEQUE</label>
+                <md-file v-model="placeholder" placeholder="APPLICANT'S CHEQUE" />
+              </md-field>
+              <md-field>
+                <label>INVITATION LETTER</label>
+                <md-file v-model="placeholder" placeholder="INVITATION LETTER" />
+              </md-field>
+              <md-field>
+                <label>VISA FEES RECEIPT</label>
+                <md-file v-model="placeholder" placeholder="VISA FEES RECEIPT" />
+              </md-field>
+              <md-card-actions>
+                <md-button type="submit" class="md-primary">SUBMIT</md-button>
+              </md-card-actions>
+            </form>
+          </div>
+        </md-app-content>
+    </md-app>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vue-material@beta"></script>
+<script>
+  Vue.use(VueMaterial.default)
+  new Vue({
+    el: '#app'
+  })
+</script>
+</body>
+</html>
